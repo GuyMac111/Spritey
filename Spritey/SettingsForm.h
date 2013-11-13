@@ -124,6 +124,8 @@ namespace Spritey {
 			this->Controls->Add(this->editorSettingsGroup);
 			this->Controls->Add(this->ApplyButton);
 			this->Controls->Add(this->CancelButton);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"SettingsForm";
 			this->Text = L"Settings";
 			this->editorSettingsGroup->ResumeLayout(false);

@@ -5,6 +5,7 @@
 #include "dStructs.h"
 #include <msclr/marshal_cppstd.h>
 #include "SettingsForm.h"
+#include "AboutForm.h"
 #pragma managed(push, off)
 #include<string>
 #include "SpriteyData.h"
@@ -377,8 +378,9 @@ protected:
 			// aboutSpriteyToolStripMenuItem
 			// 
 			this->aboutSpriteyToolStripMenuItem->Name = L"aboutSpriteyToolStripMenuItem";
-			this->aboutSpriteyToolStripMenuItem->Size = System::Drawing::Size(146, 22);
+			this->aboutSpriteyToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->aboutSpriteyToolStripMenuItem->Text = L"About Spritey";
+			this->aboutSpriteyToolStripMenuItem->Click += gcnew System::EventHandler(this, &SpriteyForm::aboutSpriteyToolStripMenuItem_Click);
 			// 
 			// sSheetPlaceholderPanel
 			// 
@@ -813,7 +815,7 @@ protected:
 			// 
 			// HuBDelayTimer
 			// 
-			this->HuBDelayTimer->Interval = 300;
+			this->HuBDelayTimer->Interval = 1000;
 			this->HuBDelayTimer->Tick += gcnew System::EventHandler(this, &SpriteyForm::HuBDelayTimer_Tick);
 			// 
 			// HuBInTimer
@@ -1682,6 +1684,14 @@ private: System::Void settingsToolStripMenuItem_Click(System::Object^  sender, S
 
 		 }
 
+private: System::Void aboutSpriteyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+		 {
+			 AboutForm^ newAboutForm = gcnew AboutForm();
+			 newAboutForm->ShowDialog();
+			 newAboutForm->~AboutForm();//mark the form for deletion
+
+		 }
+
 private: System::Void openAnimationToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e)//loads a previously saved animation
 		 {
 			 Stream^ myStream; //create a new stream to buffer to the chars returned by the OFD
@@ -2263,6 +2273,7 @@ private: System::Void stopAllAnims()
 		 }
 
 #pragma endregion
+
 
 
 };
