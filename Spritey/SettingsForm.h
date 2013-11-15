@@ -66,6 +66,7 @@ namespace Spritey {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(SettingsForm::typeid));
 			this->CancelButton = (gcnew System::Windows::Forms::Button());
 			this->ApplyButton = (gcnew System::Windows::Forms::Button());
 			this->editorSettingsGroup = (gcnew System::Windows::Forms::GroupBox());
@@ -124,6 +125,7 @@ namespace Spritey {
 			this->Controls->Add(this->editorSettingsGroup);
 			this->Controls->Add(this->ApplyButton);
 			this->Controls->Add(this->CancelButton);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^  >(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"SettingsForm";

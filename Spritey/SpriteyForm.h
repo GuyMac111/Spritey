@@ -844,9 +844,11 @@ protected:
 			this->Controls->Add(this->controlPanel);
 			this->Controls->Add(this->coordPanel);
 			this->Controls->Add(this->LogoImageBox);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^  >(resources->GetObject(L"$this.Icon")));
 			this->KeyPreview = true;
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
 			this->Name = L"SpriteyForm";
 			this->Text = L"Spritey: The Sprite Sheet & Frame Data Editor (BETA)";
 			this->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &SpriteyForm::SpriteyForm_Paint);

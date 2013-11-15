@@ -2,20 +2,20 @@
 
 #include "stdafx.h"
 #include "SpriteyForm.h"
-#include <gl/glut.h>
+//#include <gl/glut.h>
 
 using namespace Spritey;
 
 //static extern bool AllocConsole();
 
-void glutInitFunc()
-{
-	//we need to create some fake values to pass to GLUT
-	char* myargv[1];
-	int myargc = 1;
-	myargv[0] = strdup("Spritey");
-	glutInit(&myargc, myargv);
-}
+//void glutInitFunc()
+//{
+//	//we need to create some fake values to pass to GLUT
+//	char* myargv[1];
+//	int myargc = 1;
+//	myargv[0] = strdup("Spritey");
+//	glutInit(&myargc, myargv);
+//}
 
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)
@@ -30,7 +30,7 @@ int main(array<System::String ^> ^args)
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false); 
 
-	glutInitFunc();
+//	glutInitFunc();
 
 	// Create the main window and run it
 	Application::Run(gcnew SpriteyForm());
