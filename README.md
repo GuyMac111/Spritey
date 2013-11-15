@@ -25,7 +25,6 @@ If you don't have access to visual studio or just prefer not to use it, feel fre
 =========================================================
 <b>A Few Notes</b><br><br>
 
--> The release folder contains everything necessary to just run the executable (if you just wish to see the program in action). Obviously aside from the entire .NET framework. You'll need to find that yourself.<br><br>
 -> Although Spritey is a lovely program that I'm very proud of, I cannot claim 100% credit for every component of it. <br>
 Namely, the .png decoder used to  lode the pixel data from a file into openGL. This is called LodePNG and was created by Lode Vandevenne.<br>
 His site is <a href="http://lodev.org/">here</a>! (His lodepng namespace was really well documented and easy to decipher. I'd definitiely recommend it.)<br><br>
